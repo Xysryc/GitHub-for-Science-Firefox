@@ -15,7 +15,10 @@ var translation = {
      'Code': 'Text',
      'code': 'text',
      'pull requests': 'change requests',
-     'Pull requests': 'Change requests'
+     'Pull requests': 'Change requests',
+     'Pull Requests': 'Change Requests',
+     'Fork': 'Plagiarize',
+     'fork': 'plagiarize'
      };
 
 var replaceStrings = function(my_dict) {
@@ -24,13 +27,13 @@ var replaceStrings = function(my_dict) {
     $('body').safeReplace(word, my_dict[word]);
 
     //???
-    $('input').each(function() {
-      $(this).attr("placeholder","text");
-      var ph_content = $(this).attr("placeholder");
-      console.log(ph_content);
+    // $('input').each(function() {
+    //  $(this).attr("placeholder","text");
+    //  var ph_content = $(this).attr("placeholder");
+    //  console.log(ph_content);
     //var ph_content_new = ph_content.replace(word, my_dict[word]));
     //$(this).attr("placeholder",ph_content_new);
-    });
+    //});
 
   } 
 };
@@ -52,6 +55,7 @@ $(document).ready(function () {
   <a style="float:right; height:27px; top:-5px; right: -5px;" href="http://www.onlineagenten.de/" class="btn btn-sm sidebar-button" aria-label="Download the contents of stefanibus/stefanibus.github.io as a zip file" title="Download the contents of stefanibus/stefanibus.github.io as a zip file" rel="nofollow"><span class="octicon octicon-cloud-download"></span> Download PDF</a> \
                                      \
   ' );
+  $(".site").prepend ('<div class="teaser"><div class="container clearfix"><div class="teaser__main"><h1 class="teaser__title">A Better Way to do Science</h1><h3 class="teaser__subtitle">Available Now on Firefox and Chrome</h3></div><div class="teaser__aside"></div></div></div>')
 
 });
 
